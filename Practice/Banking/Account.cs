@@ -15,7 +15,7 @@ namespace BankApp
         }
         public Account(string nm,double bal)
         {
-            if (id <= 5)
+            if (id < 5)
             {
                 id = ++getId;
                 name = nm;
@@ -51,12 +51,16 @@ namespace BankApp
     {
         static void Main(string[] args)
         {
-            Account cust1, cust2, cust3;
-            try
-            {
+            Account cust1, cust2, cust3, cust4, cust5, cust6;
+           // try
+            //{
                 cust1 = new Account("Suresh", 1000);
                 cust2 = new Account("Ramesh", 1000);
                 cust3 = new Account("Rohan", 1000);
+                cust4 = new Account("Roshan", 1000);
+                cust5 = new Account("Rajesh", 1000);
+               // cust6 = new Account("Sahil", 1000);
+                //cust6.display();
                 cust1.display();
                 Console.WriteLine("\n");
                 cust2.display();
@@ -74,8 +78,8 @@ namespace BankApp
                 Console.WriteLine("\n");
                 Console.WriteLine("Interest gained: {0}", Account.payint(cust3));
                 cust3.display();
-            }
-            catch { }
+            //}
+            //catch { }
         }
     }
 }
